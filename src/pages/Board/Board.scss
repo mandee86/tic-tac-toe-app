@@ -1,0 +1,125 @@
+@import "../../vars.scss";
+
+.board-card {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  padding: 0;
+  border-radius: 0;
+  .row {
+    display: flex;
+    .cell {
+      position: relative;
+      outline: none;
+      border: 1px solid $border-color;
+      border-radius: 0;
+      flex: 1 0 auto;
+      position: relative;
+      background-color: white;
+      cursor: pointer;
+      container-type: inline-size;
+      @container (min-width: 55px) {
+        .text {
+          font-size: 24px !important;
+        }
+      }
+      .text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        line-height: 0;
+        font-size: 12px;
+      }
+      .line {
+        position: absolute;
+        left: 0;
+        top: -1px;
+        width: calc(100% + 4px);
+        border-top: 2px solid $green;
+        transform-origin: top left;
+        transform: scale(0);
+        &.winner-line {
+          animation: animated-line 0.05s linear forwards;
+        }
+        &.line-0 {
+          animation-delay: 0.05s;
+        }
+        &.line-1 {
+          animation-delay: 0.1s;
+        }
+
+        &.line-2 {
+          animation-delay: 0.15s;
+        }
+
+        &.line-3 {
+          animation-delay: 0.2s;
+        }
+        &.line-4 {
+          animation-delay: 0.25s;
+        }
+        &.vertical-winner {
+          rotate: 90deg;
+          left: 50%;
+        }
+        &.horizontal-winner {
+          top: 50%;
+        }
+        &.diagonal-left-winner {
+          rotate: 45deg;
+        }
+        &.diagonal-right-winner {
+          rotate: 135deg;
+          left: 100%;
+        }
+      }
+    }
+  }
+}
+
+.board-buttons {
+  display: flex;
+  margin-bottom: 32px;
+  width: 100%;
+  max-width: 816px;
+  @media only screen and (max-width: 600px) {
+    flex-direction: column;
+  }
+  > div {
+    flex: 1;
+    padding: 0 8px;
+    @media only screen and (max-width: 560px) {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.players {
+  display: flex;
+  margin-bottom: 32px;
+  justify-content: center;
+  align-items: center;
+  > div {
+    padding: 4px 12px;
+  }
+}
+
+.player {
+  font-weight: 600;
+  border-radius: 4px;
+  font-size: 20px;
+  color: $green;
+}
+
+.active-player {
+  border: 2px solid white;
+  color: white;
+  font-size: 22px;
+}
+
+@keyframes animated-line {
+  100% {
+    transform: scale(1);
+  }
+}

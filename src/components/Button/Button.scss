@@ -1,0 +1,39 @@
+@import "../../vars.scss";
+
+// buttons
+.btn {
+  border: none;
+  outline: none;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 4px;
+  min-height: 45px;
+  font-size: 16px;
+  text-transform: uppercase;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.btn-primary {
+  background-color: $green;
+  color: white;
+  transition: background-color linear 0.1s;
+  &:hover {
+    background-color: darken($green, 10);
+  }
+  &.outlined {
+    background: transparent;
+    border: 2px solid $green;
+    color: $green;
+    &:hover {
+      border-color: darken($green, 10);
+      color: darken($green, 10);
+      background: transparent;
+    }
+  }
+}
+
+.btn-small {
+  min-height: 32px;
+  font-size: 14px;
+}

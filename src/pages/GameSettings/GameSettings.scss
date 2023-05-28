@@ -1,0 +1,69 @@
+.settings-wrapper {
+  display: flex;
+  margin: 0 -16px;
+  justify-content: center;
+  @media only screen and (max-width: 767px) {
+    flex-direction: column;
+  }
+  > div {
+    flex: 1;
+    padding: 0 16px;
+    @media only screen and (max-width: 767px) {
+      margin: 0 auto;
+    }
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    @media only screen and (max-width: 767px) {
+      height: auto;
+    }
+
+    form {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      .form-inputs {
+        flex: 1;
+      }
+    }
+  }
+  .players-list {
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+    li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 8px;
+      &:first-child {
+        padding-top: 0;
+      }
+      button {
+        width: auto;
+      }
+    }
+    .player-name {
+      flex: 1;
+    }
+  }
+  .symbol-wrapper {
+    display: flex;
+    align-items: center;
+    > div:first-child {
+      flex: 1;
+    }
+    .color-wrapper {
+      padding-left: 12px;
+      label {
+        margin-top: 4px;
+        margin-bottom: 4px;
+      }
+    }
+  }
+}
+
+.start-game-btn {
+  max-width: 968px;
+}
