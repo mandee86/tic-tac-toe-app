@@ -5,31 +5,30 @@
   border: none;
   outline: none;
   font-weight: bold;
-  padding: 8px 12px;
-  border-radius: 4px;
+  padding: 8px 20px;
+  border-radius: 50px;
   min-height: 45px;
   font-size: 16px;
   text-transform: uppercase;
-  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   &:hover {
     cursor: pointer;
   }
 }
 .btn-primary {
-  background-color: $light-green;
+  background-color: $green2;
   color: white;
   transition: background-color linear 0.1s;
   &:hover {
-    background-color: darken($light-green, 10);
+    background-color: darken($green2, 10);
   }
   &.outlined {
     background: transparent;
-    border: 2px solid $light-green;
-    color: $light-green;
+    border: 2px solid $green2;
+    color: $green2;
     box-shadow: none;
     &:hover {
-      border-color: darken($light-green, 10);
-      color: darken($light-green, 10);
+      border-color: darken($green2, 10);
+      color: darken($green2, 10);
       background: transparent;
     }
   }
@@ -43,13 +42,13 @@
     background-color: darken(white, 10);
   }
   &.outlined {
-    background: transparent;
-    border: 2px solid $green;
-    color: $green;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
     &:hover {
-      border-color: darken($green, 10);
-      color: darken($green, 10);
-      background: transparent;
+      border-color: white;
+      color: $dark-green;
+      background-color: white;
     }
   }
 }

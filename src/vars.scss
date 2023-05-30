@@ -1,12 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 // vars
 $dark-green: #29535d;
+$dark-green2: #06766b;
 $green2: #0ba192;
 $green: #18bc9c;
 $light-green: #12bdac;
 $black: #000000d4;
 $border-color: #868e9659;
+$grey-light: #f8f9fd;
+$green-gradient: linear-gradient(48deg, $dark-green2, $green2 70%, $light-green 100%);
 
 //
-$body-text: "Jost", sans-serif;
+$body-text: "Lato", sans-serif;

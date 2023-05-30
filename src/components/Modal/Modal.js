@@ -2,7 +2,7 @@ import React from "react";
 import "./Modal.scss";
 import Button from "../Button/Button";
 
-const Modal = ({ show, onClick, btnText, onClose, title, text }) => {
+const Modal = ({ show, onClick, btnText, onClose, title, children }) => {
   if (!show) return null;
 
   return (
@@ -13,7 +13,8 @@ const Modal = ({ show, onClick, btnText, onClose, title, text }) => {
             <h3 className="modal-title">{title}</h3>
           </div>
         )}
-        {text && <div className="modal-body">{text && text}</div>}
+        {children && <div className="modal-body">{children}</div>}
+
         <div className="modal-footer">
           {onClick && <Button type="button" className="btn-small" onClick={onClick} text={btnText && btnText} />}
           <Button type="button" className="btn-small" onClick={onClose} text="Bezár" />

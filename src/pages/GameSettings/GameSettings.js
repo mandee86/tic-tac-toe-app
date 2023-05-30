@@ -159,7 +159,7 @@ const GameSettings = () => {
 
         {/* start the game button -> navigate to the board page */}
         <div className="text-center">
-          <Button type="submit" className="start-game-btn btn-secondary" text="Játék indítása" onClick={startGame} />
+          <Button type="submit" className="start-game-btn btn-primary" text="Játék indítása" onClick={startGame} />
         </div>
 
         <br />

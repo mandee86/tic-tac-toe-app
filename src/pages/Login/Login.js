@@ -11,6 +11,8 @@ const Login = ({ setIsLoggedIn }) => {
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
 
+  const [showPassword, setShowPassword] = useState(false);
+
   const [user, setUser] = useState("");
 
   const navigate = useNavigate();
@@ -62,10 +64,10 @@ const Login = ({ setIsLoggedIn }) => {
   };
 
   return (
-    <div className="card v-centered w-500 login-card">
-      <div className="login-form">
+    <div className="card v-centered login-card">
+      <div className="login-form w-500">
         <div className="card-header">
-          <h1 className="text-center m-0">Bejelentkezés</h1>
+          <h2>Bejelentkezés</h2>
         </div>
 
         <form onSubmit={handleSubmit}>
@@ -86,13 +88,21 @@ const Login = ({ setIsLoggedIn }) => {
             <label htmlFor="password">
               Jelszó<sup className="text-red">*</sup>
             </label>
-            <input
-              type="password"
-              name="password"
-              id="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
+            <div className="input-wrapper has-icon">
+              <input
+                type={showPassword ? "text" : "password"}
+                name="password"
+                id="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+              <img
+                src={showPassword ? "/img/icon-eye-inactive.svg" : "/img/icon-eye.svg"}
+                onClick={() => setShowPassword(!showPassword)}
+                className="input-icon"
+                alt="eye"
+              />
+            </div>
           </div>
 
           {/* if there is an error, show a toastify to the user */}
@@ -101,6 +111,12 @@ const Login = ({ setIsLoggedIn }) => {
             <Button type="submit" text="Bejelentkezés" />
           </div>
         </form>
+      </div>
+      <div className="welcome-box w-500">
+        <h1 className="text-center">Welcome to login</h1>
+        <div className="img-wrapper">
+          <img src="/img/icon-tic-tac-toe-white.svg" className="icon" alt="Tic tac toe icon" />
+        </div>
       </div>
     </div>
   );

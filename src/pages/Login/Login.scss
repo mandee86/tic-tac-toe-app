@@ -1,4 +1,35 @@
+@import "../../vars.scss";
+
 .login-card {
   margin-top: auto;
   margin-bottom: auto;
+  display: flex;
+  width: 100%;
+  max-width: 1000px;
+  padding: 0;
+  > div {
+    flex: 1;
+    padding: 32px;
+  }
+  .login-form {
+    padding-right: 16px;
+  }
+  .welcome-box {
+    padding-left: 16px;
+    background: $green-gradient;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    .img-wrapper {
+      flex: 1;
+      display: flex;
+      align-items: center;
+    }
+    img {
+      width: 100%;
+      max-width: 130px;
+      display: block;
+      margin: 0 auto;
+    }
+  }
 }

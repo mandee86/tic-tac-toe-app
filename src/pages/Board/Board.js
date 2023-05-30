@@ -75,6 +75,12 @@ const Board = () => {
 
     const board = JSON.parse(localStorage.getItem("board"));
     setBoard(board);
+
+    document.body.classList.add("bg-green");
+
+    return () => {
+      document.body.classList.remove("bg-green");
+    };
   }, []);
 
   // click the square function
@@ -179,13 +185,18 @@ const Board = () => {
             {/* players */}
             <Players players={players} currentPlayer={currentPlayer} />
           </div>
-
-          <Modal
-            show={showWinnerModal}
-            title={`Gratulálunk! ${winner} nyert!!!`}
-            onClose={() => setShowWinnerModal(false)}
-          />
-          <Modal show={showGameOverModal} title={`Game over! :(`} onClose={() => setShowGameOverModal(false)} />
+          <Modal show={showWinnerModal} onClose={() => setShowWinnerModal(false)}>
+            <div className="text-center">
+              <img src="/img/trophy.svg" alt="Tropy icon" width="120" />
+              <h3>Gratulálunk! {winner} nyert!!!</h3>
+            </div>
+          </Modal>
+          <Modal show={showGameOverModal} onClose={() => setShowGameOverModal(false)}>
+            <div className="text-center">
+              <img src="/img/sad-face.svg" alt="Sad face icon" width="120" />
+              <h3>Game over!</h3>
+            </div>
+          </Modal>
         </div>
       ) : null}
     </>
