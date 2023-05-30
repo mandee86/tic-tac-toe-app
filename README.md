@@ -1,4 +1,4 @@
-# Felvételi feladat
+# Amőba játék
 
 Technológiák - React (https://github.com/facebook/create-react-app)
 
@@ -8,7 +8,7 @@ A projekt futtatásához Node.js és npm szükséges.
 
 Töltse le vagy klónozza a respository-t (git clone https://github.com/mandee86/probafeladat.git). Ezt követően a projekt gyökérkönyvtárából telepítsd a dependency-ket, devDependency-ket és indítsd el a szervert.
 
-**Install**
+**Telepítés**
 
 ```sh
 $ npm install
@@ -29,7 +29,7 @@ $ npm install npm -g
 $ https://nodejs.org/en/download
 ```
 
-**Run the app in the browser**
+**Futtassa az alkalmazást a böngészőben**
 
 ```sh
 $ npm start
@@ -37,13 +37,13 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ```
 
-**Start the server**
+**Indítsa el a szervert**
 
 ```sh
 $ json-server --watch db.json --port 3004
 ```
 
-**Login into the game**
+**Jelentkezzen be a játékba**
 
 ```sh
 Felhasználónév: User1

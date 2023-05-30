@@ -201,6 +201,21 @@
   }
 }
 
+.game-info {
+  display: flex;
+  flex-wrap: nowrap;
+  .info-icon {
+    img {
+      width: 20px;
+      margin-right: 4px;
+      margin-top: 2px;
+    }
+  }
+  .info-text {
+    flex: 1;
+  }
+}
+
 @keyframes animated-line {
   100% {
     transform: scale(1);

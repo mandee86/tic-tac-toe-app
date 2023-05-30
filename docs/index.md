@@ -1,8 +1,8 @@
 # Dokumentáció
 
-## A termék
+## Az alkalmazás
 
-A termék egy böngészőben futtatható amőba játék, melynek elindításához a felhasználónak egy felhasználónév jelszó párossal
+A alkalmazás egy böngészőben futtatható amőba játék, melynek elindításához a felhasználónak egy felhasználónév jelszó párossal
 kell belépnie. Induláskor a pálya mérete, a játékosok neve és a játékosok által használt jel megadható. A játékosok ugyanabban a böngészőablakban játszanak, és a játék során egy felirat jelzi, hogy melyik játékos léphet következőnek. Akinek először összejön egymás mellett (vízszintesen, függőlegesen vagy átlósan) 5 jel, az győzött, a győztes neve pedig egy modalban jelenik meg. Gombnyomásra a játék újra indítható, és új beállítások adhatók meg.
 
 ## Technológiák

@@ -155,6 +155,14 @@ const Board = () => {
           <div className="buttons-wrapper">
             {/* restart, new settings and logout buttons */}
             <BoardButtons restartGame={restartGame} resetGame={resetGame} quitGame={quitGame} isGameOver={isGameOver} />
+            <div className="game-info">
+              <div className="info-icon">
+                <img src="/img/icon-info.svg" className="icon" alt="Info icon" />
+              </div>
+              <div className="info-text">
+                <p>Az győz, akinek először összejön egymás mellett 5 jel</p>
+              </div>
+            </div>
           </div>
           <div className="board-wrapper">
             {/* board */}
