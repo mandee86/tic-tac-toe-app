@@ -5,7 +5,7 @@ const Players = ({ players, currentPlayer }) => {
     <div className="players">
       {players?.map((player) => (
         <div key={player.id} className={player.symbol === currentPlayer ? "active-player player" : "player"}>
-          {player.name} ({player.symbol})
+          <span className="player-name">{player.name}</span> <span>({player.symbol})</span>
         </div>
       ))}
     </div>

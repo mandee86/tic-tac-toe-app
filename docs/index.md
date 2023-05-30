@@ -15,6 +15,7 @@ Nincs backend, helyette a termék a json-server package-t használja fake API l�
 
 ## Mappa struktúra
 
+```sh
 tic-tac-toe-app
 ├───docs
 │ ├───index.md # Documentation data
@@ -56,3 +57,4 @@ tic-tac-toe-app
 │ │ │ ───NotFound.scss # NotFound stylesheet
 │ │ ───Protected.js # Protected component (for protected routes)
 │ ├───services # Data manipulation
+```

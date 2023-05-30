@@ -2,6 +2,9 @@ import React, { useRef } from "react";
 import { arrayEquals } from "../../helpers";
 
 const Squares = ({ board, onClick, winner, winnerDirection, winnerCells, players }) => {
+  const gap = window.innerWidth > 767 ? 48 : 24;
+  const side = window.innerWidth > 767 ? 400 : 60;
+  const containerGap = window.innerWidth > 767 ? 48 : 12;
   //this ref is needed to get the square size
   const squareRef = useRef(null);
 
@@ -20,8 +23,23 @@ const Squares = ({ board, onClick, winner, winnerDirection, winnerCells, players
     return player.color;
   };
 
+  const getCellSize = () => {
+    let size = 0;
+
+    if (window.innerWidth - (gap + side) < window.innerHeight) {
+      size =
+        window.innerWidth < 1200
+          ? (window.innerWidth - (gap + side + containerGap) - 8) / board.length
+          : 752 / board.length - 8;
+    } else {
+      size = window.innerHeight < 752 ? (window.innerHeight - gap - 12) / board.length : 752 / board.length;
+    }
+
+    return size;
+  };
+
   return (
-    <div className="card v-centered board-card">
+    <div className="v-centered board-card">
       {board.map((row, rowIndex) => (
         <div className="row" key={rowIndex}>
           {row.map((col, colIndex) => (
@@ -30,9 +48,12 @@ const Squares = ({ board, onClick, winner, winnerDirection, winnerCells, players
               ref={squareRef}
               key={`${rowIndex}${colIndex}`}
               onClick={() => onClick(rowIndex, colIndex)}
-              style={{ width: `calc(100%/${board.length})`, paddingBottom: `calc(100%/${board.length} - 3px)` }}
+              style={{ width: getCellSize(), paddingBottom: getCellSize() }}
             >
-              <span className="text" style={{ color: getColor(board[rowIndex][colIndex]) }}>
+              <span
+                className="text"
+                style={{ color: getColor(board[rowIndex][colIndex]), fontSize: getCellSize() * 0.7 }}
+              >
                 {board[rowIndex][colIndex]}
               </span>
 
@@ -42,7 +63,7 @@ const Squares = ({ board, onClick, winner, winnerDirection, winnerCells, players
                   className={`${winnerDirection} line winner-line line-${getIndexOfWinner(rowIndex, colIndex)}`}
                   style={
                     winnerDirection === "diagonal-left-winner" || winnerDirection === "diagonal-right-winner"
-                      ? { width: 1.414 * squareRef?.current?.clientWidth }
+                      ? { width: 1.414 * squareRef?.current?.clientWidth + 2 }
                       : {}
                   }
                 ></div>

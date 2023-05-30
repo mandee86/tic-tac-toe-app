@@ -114,7 +114,13 @@ const GameSettings = () => {
       return;
     }
 
-    //else navigate to the board page
+    // else create an empty board
+    const createdBoard = createEmptyBoard(Number(size));
+    // set the board and the size in the localStorage, so if refreshing the page the data won`t be lost
+    localStorage.setItem("board", JSON.stringify(createdBoard));
+    localStorage.setItem("size", size);
+
+    //and navigate to the board page
     navigate("/board");
   };
 
@@ -153,7 +159,7 @@ const GameSettings = () => {
 
         {/* start the game button -> navigate to the board page */}
         <div className="text-center">
-          <Button type="submit" className="start-game-btn" text="Játék indítása" onClick={startGame} />
+          <Button type="submit" className="start-game-btn btn-secondary" text="Játék indítása" onClick={startGame} />
         </div>
 
         <br />

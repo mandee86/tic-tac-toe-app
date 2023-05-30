@@ -1,27 +1,66 @@
 @import "../../vars.scss";
 
+.board-page {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.board-wrapper {
+  height: 100%;
+  max-height: 752px;
+}
+
 .board-card {
-  width: 100%;
-  max-width: 800px;
-  height: auto;
-  padding: 0;
-  border-radius: 0;
+  margin: -2px;
   .row {
     display: flex;
+    &:first-child {
+      .cell {
+        &:after {
+          border-top: none;
+          height: calc(100% - 2px);
+        }
+      }
+    }
+    &:last-child {
+      .cell {
+        &:after {
+          border-bottom: none;
+          height: calc(100% - 2px);
+        }
+      }
+    }
     .cell {
       position: relative;
       outline: none;
-      border: 1px solid $border-color;
       border-radius: 0;
       flex: 1 0 auto;
       position: relative;
-      background-color: white;
       cursor: pointer;
-      container-type: inline-size;
-      @container (min-width: 55px) {
-        .text {
-          font-size: 24px !important;
+      &:first-child {
+        &:after {
+          border-left: none;
+          width: calc(100% - 2px);
         }
+      }
+      &:last-child {
+        &:after {
+          width: calc(100% - 2px);
+          border-right: none;
+        }
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: calc(100% - 4px);
+        height: calc(100% - 4px);
+        top: 0;
+        left: 0;
+        border: 2px solid $green2;
       }
       .text {
         position: absolute;
@@ -29,16 +68,16 @@
         left: 50%;
         transform: translate(-50%, -50%);
         line-height: 0;
-        font-size: 12px;
       }
       .line {
         position: absolute;
         left: 0;
         top: -1px;
         width: calc(100% + 4px);
-        border-top: 2px solid $green;
+        border-top: 4px solid $dark-green;
         transform-origin: top left;
         transform: scale(0);
+        z-index: 10;
         &.winner-line {
           animation: animated-line 0.05s linear forwards;
         }
@@ -62,9 +101,12 @@
         &.vertical-winner {
           rotate: 90deg;
           left: 50%;
+          margin-left: 2px;
         }
         &.horizontal-winner {
+          left: -1px;
           top: 50%;
+          margin-top: -2px;
         }
         &.diagonal-left-winner {
           rotate: 45deg;
@@ -78,44 +120,85 @@
   }
 }
 
-.board-buttons {
-  display: flex;
-  margin-bottom: 32px;
-  width: 100%;
-  max-width: 816px;
-  @media only screen and (max-width: 600px) {
-    flex-direction: column;
+.buttons-wrapper,
+.players-wrapper {
+  width: 200px;
+  @media screen and (max-width: 767px) {
+    width: 30px;
   }
-  > div {
-    flex: 1;
-    padding: 0 8px;
-    @media only screen and (max-width: 560px) {
+}
+
+.buttons-wrapper {
+  margin-right: 24px;
+  @media screen and (max-width: 767px) {
+    margin-right: 12px;
+  }
+  .board-buttons {
+    > div {
+      flex: 1;
       margin-bottom: 16px;
+      @media screen and (max-width: 767px) {
+        margin-bottom: 8px;
+      }
+    }
+    .btn {
+      @media screen and (max-width: 767px) {
+        width: 30px;
+        height: 30px;
+        min-height: 0;
+        font-size: 0;
+        padding: 0;
+      }
+      .icon {
+        width: 22px;
+        @media screen and (min-width: 768px) {
+          display: none;
+        }
+      }
     }
   }
 }
 
-.players {
-  display: flex;
-  margin-bottom: 32px;
-  justify-content: center;
-  align-items: center;
-  > div {
-    padding: 4px 12px;
+.players-wrapper {
+  margin-left: 24px;
+  @media screen and (max-width: 767px) {
+    margin-left: 12px;
   }
-}
+  .players {
+    > div {
+      padding: 4px 12px;
+      @media screen and (max-width: 767px) {
+        padding: 5px 0;
+      }
+    }
+  }
 
-.player {
-  font-weight: 600;
-  border-radius: 4px;
-  font-size: 20px;
-  color: $green;
-}
+  .player {
+    font-weight: 600;
+    border-radius: 4px;
+    font-size: 20px;
+    color: $dark-green;
+    text-align: center;
+    border: 2px solid transparent;
+    margin-bottom: 4px;
+    @media screen and (max-width: 768px) {
+      font-size: 14px;
+    }
+  }
+  .player-name {
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
 
-.active-player {
-  border: 2px solid white;
-  color: white;
-  font-size: 22px;
+  .active-player {
+    border-color: white;
+    color: white;
+    font-size: 22px;
+    @media screen and (max-width: 768px) {
+      font-size: 14px;
+    }
+  }
 }
 
 @keyframes animated-line {

@@ -10,16 +10,37 @@
   min-height: 45px;
   font-size: 16px;
   text-transform: uppercase;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   &:hover {
     cursor: pointer;
   }
 }
 .btn-primary {
-  background-color: $green;
+  background-color: $light-green;
   color: white;
   transition: background-color linear 0.1s;
   &:hover {
-    background-color: darken($green, 10);
+    background-color: darken($light-green, 10);
+  }
+  &.outlined {
+    background: transparent;
+    border: 2px solid $light-green;
+    color: $light-green;
+    box-shadow: none;
+    &:hover {
+      border-color: darken($light-green, 10);
+      color: darken($light-green, 10);
+      background: transparent;
+    }
+  }
+}
+
+.btn-secondary {
+  background-color: white;
+  color: $dark-green;
+  transition: background-color linear 0.1s;
+  &:hover {
+    background-color: darken(white, 10);
   }
   &.outlined {
     background: transparent;

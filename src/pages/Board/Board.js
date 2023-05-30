@@ -48,15 +48,8 @@ const Board = () => {
 
   // reset the game function -> add new settings  (players, board)
   const resetGame = () => {
-    // remove the board, and the size from localeStorage
-    localStorage.removeItem("board");
-    localStorage.removeItem("size");
-
-    // delete the players form the "database"
-    // after deleting navigate to the settings page
-    deletePlayers(players).then(() => {
-      navigate("/game-settings");
-    });
+    // navigate to the settings page
+    navigate("/game-settings");
   };
 
   // quit game funciton - logout
@@ -158,22 +151,26 @@ const Board = () => {
   return (
     <>
       {board?.length ? (
-        <>
-          {/* restart, new settings and logout buttons */}
-          <BoardButtons restartGame={restartGame} resetGame={resetGame} quitGame={quitGame} isGameOver={isGameOver} />
-
-          {/* players */}
-          <Players players={players} currentPlayer={currentPlayer} />
-
-          {/* board */}
-          <Squares
-            board={board}
-            onClick={handleClickSquare}
-            winner={winner}
-            winnerDirection={winnerDirection}
-            winnerCells={winnerCells}
-            players={players}
-          />
+        <div className="board-page">
+          <div className="buttons-wrapper">
+            {/* restart, new settings and logout buttons */}
+            <BoardButtons restartGame={restartGame} resetGame={resetGame} quitGame={quitGame} isGameOver={isGameOver} />
+          </div>
+          <div className="board-wrapper">
+            {/* board */}
+            <Squares
+              board={board}
+              onClick={handleClickSquare}
+              winner={winner}
+              winnerDirection={winnerDirection}
+              winnerCells={winnerCells}
+              players={players}
+            />
+          </div>
+          <div className="players-wrapper">
+            {/* players */}
+            <Players players={players} currentPlayer={currentPlayer} />
+          </div>
 
           <Modal
             show={showWinnerModal}
@@ -181,7 +178,7 @@ const Board = () => {
             onClose={() => setShowWinnerModal(false)}
           />
           <Modal show={showGameOverModal} title={`Game over! :(`} onClose={() => setShowGameOverModal(false)} />
-        </>
+        </div>
       ) : null}
     </>
   );
