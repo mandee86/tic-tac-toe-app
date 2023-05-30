@@ -6,7 +6,7 @@ A projekt futtatásához Node.js és npm szükséges.
 
 ## How to
 
-Töltse le vagy klónozza a respository-t (git clone https://github.com/mandee86/probafeladat.git). Ezt követően a projekt gyökérkönyvtárából telepítsd a dependency-ket, devDependency-ket és indítsd el a szervert.
+Töltse le vagy klónozza a respository-t (git clone https://github.com/mandee86/tic-tac-toe-app.git). Ezt követően a projekt gyökérkönyvtárából telepítsd a dependency-ket, devDependency-ket és indítsd el a szervert.
 
 **Telepítés**
 
