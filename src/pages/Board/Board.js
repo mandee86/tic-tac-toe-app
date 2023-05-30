@@ -166,7 +166,7 @@ const Board = () => {
                 <img src="/img/icon-info.svg" className="icon" alt="Info icon" />
               </div>
               <div className="info-text">
-                <p>Az győz, akinek először összejön egymás mellett 5 jel</p>
+                <p>Az a játékos győz, akinek először összejön egymás mellett 5 jel</p>
               </div>
             </div>
           </div>

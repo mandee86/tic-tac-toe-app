@@ -55,7 +55,7 @@ const PlayerForm = ({
               </div>
 
               <div className="color-wrapper">
-                <label htmlFor="newPlayerSymbol">
+                <label htmlFor="newPlayerSymbol" className="text-center">
                   Szín
                   <br />
                   <span>&nbsp;</span>

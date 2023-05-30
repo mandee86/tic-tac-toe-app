@@ -114,9 +114,7 @@ const Login = ({ setIsLoggedIn }) => {
       </div>
       <div className="welcome-box w-500">
         <h1 className="text-center">Welcome to login</h1>
-        <div className="img-wrapper">
-          <img src="/img/icon-tic-tac-toe-white.svg" className="icon" alt="Tic tac toe icon" />
-        </div>
+        <img src="/img/icon-tic-tac-toe-white.svg" className="icon" alt="Tic tac toe icon" />
       </div>
     </div>
   );
