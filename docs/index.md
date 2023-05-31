@@ -65,6 +65,7 @@ tic-tac-toe-app
 
 ## Frontend architektúra
 
+![icon-restart](https://github.com/mandee86/tic-tac-toe-app/assets/43792757/b5d9a053-5561-4dfd-8af5-85d12a7ce98c)
 
 
 Amikor a felhasználó interakcióba lép az alkalmazással, az alkalmazás a megfelelő modulhoz irányítja őt. Minden modul bizonyos funkciókat és üzleti logikát tartalmaz. Ezenkívül minden modulnak lehetősége van az alkalmazási réteg használatával API-n keresztül kommunikálni a backenddel.
