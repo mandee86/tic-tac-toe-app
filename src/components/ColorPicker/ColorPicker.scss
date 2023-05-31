@@ -21,6 +21,11 @@
   left: 50%;
   margin-left: -85px;
   top: calc(100% + 12px);
+  @media screen and (max-width: 767px) {
+    left: auto;
+    right: 0;
+    margin-right: -36px;
+  }
 }
 .cover {
   position: fixed;

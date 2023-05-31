@@ -1,21 +1,8 @@
 import React, { useState } from "react";
-import { BlockPicker } from "react-color";
+import { SwatchesPicker } from "react-color";
 import "./ColorPicker.scss";
 
-const defaultColors = [
-  "#000000d4",
-  "#FF6F61",
-  "#697689",
-  "#EFC050",
-  "#2CCCE4",
-  "#ba68c8",
-  "#C3447A",
-  "#DFCFBE",
-  "#9B2335",
-  "#29535d",
-];
-
-const ColorPicker = ({ color, setColor, colors = defaultColors }) => {
+const ColorPicker = ({ color, setColor }) => {
   const [showPicker, setShowPicker] = useState(false);
 
   const handleClick = () => {
@@ -34,7 +21,13 @@ const ColorPicker = ({ color, setColor, colors = defaultColors }) => {
       {showPicker ? (
         <div className="popover">
           <div className="cover" onClick={handleClose} />
-          <BlockPicker color={color} onChange={(color) => setColor(color.hex)} colors={colors} />
+          <SwatchesPicker
+            color={color}
+            onChange={(color) => {
+              setColor(color.hex);
+              handleClose();
+            }}
+          />
         </div>
       ) : null}
     </div>
