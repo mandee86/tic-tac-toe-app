@@ -33,8 +33,8 @@ $ https://nodejs.org/en/download
 
 ```sh
 $ npm start
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
+Nyissa meg a http://localhost:3000 a böngészőben.
 ```
 
 **Indítsa el a szervert**
