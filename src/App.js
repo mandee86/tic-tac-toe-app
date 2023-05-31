@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import "./App.scss";
-import Login from "./pages/Login/Login";
-import Board from "./pages/Board/Board";
-import NotFound from "./pages/NotFound/NotFound";
+import Login from "./modules/Login/Login";
+import Board from "./modules/Board/Board";
+import NotFound from "./modules/NotFound/NotFound";
+import GameSettings from "./modules/GameSettings/GameSettings";
+import Protected from "./modules/Protected";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import GameSettings from "./pages/GameSettings/GameSettings";
-import Protected from "./pages/Protected";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
