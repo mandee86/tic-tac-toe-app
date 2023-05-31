@@ -11,11 +11,11 @@ React, SCSS, axios, json-server
 
 ## Szerver
 
-Ay alkalmazás localhost-n fut
+Az alkalmazás localhost-n fut
 
 ## Backend API
 
-Nincs backend, helyette a alkalmazás a json-server package-t használja fake API létrehozására.
+Nincs backend, helyette az alkalmazás a json-server package-t használja fake API létrehozására.
 
 ## Mappa struktúra
 
