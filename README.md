@@ -6,7 +6,7 @@ A projekt futtatásához Node.js és npm szükséges.
 
 ## How to
 
-Töltse le vagy klónozza a respository-t (git clone https://github.com/mandee86/tic-tac-toe-app.git). Ezt követően a projekt gyökérkönyvtárából telepítsd a dependency-ket, devDependency-ket és indítsd el a szervert.
+Töltse le vagy klónozza a respository-t (git clone https://github.com/mandee86/tic-tac-toe-app.git). Ezt követően a projekt gyökérkönyvtárából telepítse a dependency-ket, devDependency-ket és indítsa el a szervert.
 
 **Telepítés**
 
@@ -33,8 +33,8 @@ $ https://nodejs.org/en/download
 
 ```sh
 $ npm start
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
+Nyissa meg a http://localhost:3000 a böngészőben.
 ```
 
 **Indítsa el a szervert**

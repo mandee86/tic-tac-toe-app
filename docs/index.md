@@ -11,11 +11,11 @@ React, SCSS, axios, json-server
 
 ## Szerver
 
-Ay alkalmazás localhost-n fut
+Az alkalmazás localhost-n fut
 
 ## Backend API
 
-Nincs backend, helyette a alkalmazás a json-server package-t használja fake API létrehozására.
+Nincs backend, helyette az alkalmazás a json-server package-t használja fake API létrehozására.
 
 ## Mappa struktúra
 
@@ -65,7 +65,7 @@ tic-tac-toe-app
 
 ## Frontend architektúra
 
-KEEEEEEEP!!!!!!!
+<img src="https://github.com/mandee86/tic-tac-toe-app/blob/main/public/img/frontend-architecture.webp" width="400">
 
 Amikor a felhasználó interakcióba lép az alkalmazással, az alkalmazás a megfelelő modulhoz irányítja őt. Minden modul bizonyos funkciókat és üzleti logikát tartalmaz. Ezenkívül minden modulnak lehetősége van az alkalmazási réteg használatával API-n keresztül kommunikálni a backenddel.
 
