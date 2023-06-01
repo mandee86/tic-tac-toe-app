@@ -37,9 +37,15 @@ tic-tac-toe-app
 │ ───helpers.js # Helper functions
 │ ───vars.scss # Style variables (colors, fonts)
 │ ├───components # UI Components used
-│ │ ├───Button # Customizable button component
+│ │ ├───Button 
+│ │ │ ───Button.js # Customizable button component
+│ │ │ ───Button.scss # Button stylesheet
+│ │ ├───ColorPicker
+│ │ │ ───Modal.js # General modal component
+│ │ │ ───Modal.scss # Modal stylesheet
 │ │ ├───Modal
 │ │ │ ───Modal.js # General modal component
+│ │ │ ───Modal.scss # Modal stylesheet
 │ │ │ ───ModalConfirm.js # Modal component for user confirmation
 │ ├───modules # views of the Application
 │ │ ├───Board
