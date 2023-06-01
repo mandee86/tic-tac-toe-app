@@ -25,7 +25,7 @@ tic-tac-toe-app
 │ ├───index.md # Documentation data
 ├───node modules # Dependencies
 │ ──package.json # npm dependencies and run scripts
-│ ──.gitignore #
+│ ──.gitignore # Specifies files that Git should ignore
 │ ──db.json # Imitate database
 │ ──README.md # Documentation
 ├───public
