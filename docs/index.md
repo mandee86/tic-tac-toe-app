@@ -41,8 +41,8 @@ tic-tac-toe-app
 │ │ │ ───Button.js # Customizable button component
 │ │ │ ───Button.scss # Button stylesheet
 │ │ ├───ColorPicker
-│ │ │ ───Modal.js # General modal component
-│ │ │ ───Modal.scss # Modal stylesheet
+│ │ │ ───ColorPicker.js # custom colorpicker component (using React Color package)
+│ │ │ ───ColorPicker.scss # ColorPicker stylesheet
 │ │ ├───Modal
 │ │ │ ───Modal.js # General modal component
 │ │ │ ───Modal.scss # Modal stylesheet
