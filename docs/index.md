@@ -24,10 +24,10 @@ tic-tac-toe-app
 ├───docs
 │ ├───index.md # Documentation data
 ├───node modules # Dependencies
-│ ───package.json # npm dependencies and run scripts
-│ ───.gitignore #
-│ ───db.json # Imitate database
-│ ───README.md # Documentation
+│ ──package.json # npm dependencies and run scripts
+│ ──.gitignore #
+│ ──db.json # Imitate database
+│ ──README.md # Documentation
 ├───public
 │ ├──index.html # Entry point of application
 ├───src
@@ -36,40 +36,40 @@ tic-tac-toe-app
 │ ───index.js # React starting point
 │ ───helpers.js # Helper functions
 │ ───vars.scss # Style variables (colors, fonts)
-│ ├───components # UI Components used
-│ │ ├───Button 
-│ │ │ ───Button.js # Customizable button component
-│ │ │ ───Button.scss # Button stylesheet
-│ │ ├───ColorPicker
-│ │ │ ───ColorPicker.js # custom colorpicker component (using React Color package)
-│ │ │ ───ColorPicker.scss # ColorPicker stylesheet
-│ │ ├───Modal
-│ │ │ ───Modal.js # General modal component
-│ │ │ ───Modal.scss # Modal stylesheet
-│ │ │ ───ModalConfirm.js # Modal component for user confirmation
-│ ├───modules # views of the Application
-│ │ ├───Board
-│ │ │ ───Board.js # View for game
-│ │ │ ───Board.scss # Board stylesheet
-│ │ │ ───BoardButtons.js # Buttons of the game (restart, reset, quit) component
-│ │ │ ───Players.js # Players of the game component
-│ │ │ ───Squares.js # Squares of the board component
-│ │ ├───GameSettings
-│ │ │ ───BoardForm.js # Settings form component of the board
-│ │ │ ───GameSettings.js # View for settings of the game (players, board)
-│ │ │ ───GameSettings.scss # GameSettings stylesheet
-│ │ │ ───PlayerForm.js # Settings form component of players
-│ │ ├───Login
-│ │ │ ───Login.js # View for login (username, password)
-│ │ │ ───Login.scss # Login stylesheet
-│ │ ├───NotFound
-│ │ │ ───NotFound.js # View for not found page
-│ │ │ ───NotFound.scss # NotFound stylesheet
-│ │ ───Protected.js # Protected component (for protected routes)
-│ ├───services # Data manipulation
-│ │ ───index.js # Axios configuration
-│ │ ───playersApi.js # Players data manipulation (get, post, delete)
-│ │ ───userApi.js # User data manipulation (get)
+│ ├──components # UI Components used
+│ │ ├──Button 
+│ │ │ ──Button.js # Customizable button component
+│ │ │ ──Button.scss # Button stylesheet
+│ │ ├──ColorPicker
+│ │ │ ──ColorPicker.js # custom colorpicker component (using React Color package)
+│ │ │ ──ColorPicker.scss # ColorPicker stylesheet
+│ │ ├──Modal
+│ │ │ ──Modal.js # General modal component
+│ │ │ ──Modal.scss # Modal stylesheet
+│ │ │ ──ModalConfirm.js # Modal component for user confirmation
+│ ├──modules # views of the Application
+│ │ ├──Board
+│ │ │ ──Board.js # View for game
+│ │ │ ──Board.scss # Board stylesheet
+│ │ │ ──BoardButtons.js # Buttons of the game (restart, reset, quit) component
+│ │ │ ──Players.js # Players of the game component
+│ │ │ ──Squares.js # Squares of the board component
+│ │ ├──GameSettings
+│ │ │ ──BoardForm.js # Settings form component of the board
+│ │ │ ──GameSettings.js # View for settings of the game (players, board)
+│ │ │ ──GameSettings.scss # GameSettings stylesheet
+│ │ │ ──PlayerForm.js # Settings form component of players
+│ │ ├──Login
+│ │ │ ──Login.js # View for login (username, password)
+│ │ │ ──Login.scss # Login stylesheet
+│ │ ├──NotFound
+│ │ │ ──NotFound.js # View for not found page
+│ │ │ ──NotFound.scss # NotFound stylesheet
+│ │ ──Protected.js # Protected component (for protected routes)
+│ ├──services # Data manipulation
+│ │ ──index.js # Axios configuration
+│ │ ──playersApi.js # Players data manipulation (get, post, delete)
+│ │ ──userApi.js # User data manipulation (get)
 ```
 
 ## Frontend architektúra
