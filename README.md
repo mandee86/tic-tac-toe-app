@@ -37,9 +37,10 @@ $ npm start
 Nyissa meg a http://localhost:3000 a böngészőben.
 ```
 
-**Indítsa el a szervert**
+**Telepítse és indítsa el a szervert**
 
 ```sh
+$ npm install -g json-server
 $ json-server --watch db.json --port 3004
 ```
 
