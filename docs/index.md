@@ -67,6 +67,9 @@ tic-tac-toe-app
 │ │ │ ───NotFound.scss # NotFound stylesheet
 │ │ ───Protected.js # Protected component (for protected routes)
 │ ├───services # Data manipulation
+│ │ ───index.js # Axios configuration
+│ │ ───playersApi.js # Players data manipulation (get, post, delete)
+│ │ ───userApi.js # User data manipulation (get)
 ```
 
 ## Frontend architektúra
