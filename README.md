@@ -28,6 +28,12 @@ Ha nincs telepítve:
 $ npm install npm -g
 $ https://nodejs.org/en/download
 ```
+**Telepítse és indítsa el a szervert**
+
+```sh
+$ npm install -g json-server
+$ json-server --watch db.json --port 3004
+```
 
 **Futtassa az alkalmazást a böngészőben**
 
@@ -35,13 +41,6 @@ $ https://nodejs.org/en/download
 $ npm start
 
 Nyissa meg a http://localhost:3000 a böngészőben.
-```
-
-**Telepítse és indítsa el a szervert**
-
-```sh
-$ npm install -g json-server
-$ json-server --watch db.json --port 3004
 ```
 
 **Jelentkezzen be a játékba**
